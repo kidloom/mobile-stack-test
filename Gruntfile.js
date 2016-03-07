@@ -17,6 +17,7 @@ module.exports = function(grunt) {
     karma: require('./grunt/karma'),
     watch: require('./grunt/watch'),
     copy: require('./grunt/copy'),
+    connect: require('./grunt/connect')
   });
 
   require('load-grunt-tasks')(grunt);
@@ -27,7 +28,9 @@ module.exports = function(grunt) {
     'clean',
     'browserify:dev',
     'copy',
-    'replace:dev'
+    'replace:dev',
+    'connect',
+    'watch'
   ]);
 
   grunt.registerTask('test', [

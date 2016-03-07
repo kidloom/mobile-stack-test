@@ -1,7 +1,7 @@
 var sourceFiles = require('./sourceFiles');
 
 module.exports = {
-  files: sourceFiles.concat('src/assets/css/*.css').concat('src/**/*.html'),
+  files: sourceFiles.concat('src/assets/css/*.css').concat('src/**/*.html').concat('src/**/*.js'),
   tasks: ['browserify:dev', 'copy', 'replace:dev'],
   options: {
     livereload: true,

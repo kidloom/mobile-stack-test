@@ -10,7 +10,7 @@ module.exports = {
     options: {
       debug: true,
       bundleDelay: 1000,
-      transform: ['partialify', 'babelify', aliasify('dev')]
+      transform: ['babelify', aliasify('dev')]
     }
   },
   prod: {
@@ -21,7 +21,7 @@ module.exports = {
     options: {
       debug: true,
       bundleDelay: 1000,
-      transform: ['partialify', 'babelify', aliasify('prod')]
+      transform: ['babelify', aliasify('prod')]
     }
   }
 };

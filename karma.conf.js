@@ -25,7 +25,7 @@ module.exports = function(config) {
 
     browserify: {
       debug: true,
-      transform: ['partialify', 'babelify', aliasify('dev')]
+      transform: ['babelify', aliasify('dev')]
     },
 
     babelPreprocessor: {

@@ -4,10 +4,6 @@ import HelloComponent from './components/hello';
 import appRouter from './router';
 
 appRouter.add('/', () => {
-  if (!window.console || !window.console.log) {
-    window.console = { log: function log() {} };
-  }
-  console.log('something');
   HelloComponent(this);
 });
 

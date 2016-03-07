@@ -10,4 +10,4 @@ Features:
 - grunt almost complete
 
 
-Based on https://github.com/michaelsogos/Hash-Router (d31f2cc)
+Based on https://github.com/nekman/es6-vue-babel-eslint-browserify-grunt-starter (3ecc697)
