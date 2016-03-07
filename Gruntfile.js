@@ -17,18 +17,24 @@ module.exports = function(grunt) {
     karma: require('./grunt/karma'),
     watch: require('./grunt/watch'),
     copy: require('./grunt/copy'),
-    connect: require('./grunt/connect')
+    connect: require('./grunt/connect'),
+    dot: require('./grunt/dot')
   });
 
   require('load-grunt-tasks')(grunt);
+
+  grunt.registerTask('compile', [
+    'browserify:dev',
+    'copy',
+    'replace:dev'
+  ]);
 
   grunt.registerTask('default', [
     'eslint',
     'karma',
     'clean',
-    'browserify:dev',
-    'copy',
-    'replace:dev',
+    'dot',
+    'compile',
     'connect',
     'watch'
   ]);

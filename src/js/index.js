@@ -3,7 +3,7 @@ import HelloComponent from './components/hello';
 // import StockComponent from './components/stock';
 import appRouter from './router';
 
-appRouter.add('/', () => {
+appRouter.add('/:message', () => {
   HelloComponent(this);
 });
 

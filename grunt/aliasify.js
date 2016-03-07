@@ -13,4 +13,4 @@ module.exports = function aliasify(environment) {
     verbose: true
   });
 
-}
+};
