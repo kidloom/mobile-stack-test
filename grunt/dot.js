@@ -1,10 +1,11 @@
 module.exports = {
   dev: {
     options: {
-      variable: 'tpl',
-      root: __dirname + '/src/js/components/'
+      variable: 'templ',
+      root: __dirname+'/',
+      node: true
     },
-    src: [ '**/*.dot' ],
-    dest: './tpl.js'
+    src: [ 'src/js/components/**/*.dot' ],
+    dest: 'src/templates.js'
   }
 };

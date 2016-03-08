@@ -3,3 +3,4 @@ test/
 karma.conf.js
 Gruntfile.js
 grunt/*
+src/templates.js

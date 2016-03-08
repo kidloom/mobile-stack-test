@@ -1,4 +1,0 @@
-define(function(){return { src:{ js:{ components:{ hello:{ "template.html":function anonymous(it
-/**/) {
-var out='<section> <header> <h2>Hello</h2> </header> <article> <p>{ message }</p> <input value="'+(it.message)+'" /> <p>Data from $parent</p> <a href="{{=it.path+\'/stocks\'}">Go to Stocks</a> </article></section>';return out;
-} } } } } };});

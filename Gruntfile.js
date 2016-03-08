@@ -6,11 +6,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-		options: {
-			force: true
-		},
-		files: ['./dist']
-	},
+      options: {
+        force: true
+      },
+      files: ['./dist']
+    },
     eslint: require('./grunt/eslint'),
     replace: textReplacer(grunt),
     browserify: require('./grunt/browserify'),
@@ -48,6 +48,7 @@ module.exports = function(grunt) {
     'eslint',
     'karma',
     'clean',
+    'dot',
     'browserify:prod',
     'copy',
     'replace:prod'

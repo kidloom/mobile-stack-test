@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>App</title>
+    <link rel="stylesheet" href="http://amazonia.storage.googleapis.com/v23/arpersonal/css/main.css">
     <link rel="stylesheet" href="css/@@APP_CSS">
   </head>
 
   <body id="app">
-    <div id="router-view"></div>
+    <div class="loader" id="loading">
+        <img src="" alt="logo" class="logo" src=""/>
+        <div class="spinner"></div>
+    </div>
+
+    <header class="main-header">
+        <a class="btn-settings feedback pull-left">&equiv;</a>
+    </header>
+
+    <div id="router-view" class="container">
+    </div>
+
+    <footer class="text-center">
+        <a id="footer-label" href="#somewhere"></a>
+    </footer>
     <script src="@@APP_JS"></script>
   </body>
-
 </html>
