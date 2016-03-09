@@ -3,11 +3,12 @@ import HelloComponent from './components/hello';
 import { default as router } from 'directify';
  
 let routingTable = {
-  '/': (message) => {
-    document.getElementById('router-view').appendChild(HelloComponent({ message }));
+  's': () => {
+    document.getElementById('router-view').appendChild(HelloComponent());
   },
-  ':notfound': () => {
-    document.getElementById('router-view').innerHTML = '<p>ups!</p>';
+  '/:path': (message) => {
+    document.getElementById('router-view').innerHTML = '';
+    document.getElementById('router-view').appendChild(HelloComponent({ message }));
   }
 };
  

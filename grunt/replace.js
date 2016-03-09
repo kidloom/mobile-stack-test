@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       ]
     },
     dev: {
-      src: ['dist/index.html'],
+      src: ['.tmp/index.html'],
       overwrite: true,
       replacements: [
         {

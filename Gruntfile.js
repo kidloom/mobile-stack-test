@@ -9,7 +9,8 @@ module.exports = function(grunt) {
       options: {
         force: true
       },
-      files: ['./dist']
+      prod: ['./dist'],
+      dev: ['.tmp']
     },
     eslint: require('./grunt/eslint'),
     replace: textReplacer(grunt),
@@ -18,21 +19,24 @@ module.exports = function(grunt) {
     watch: require('./grunt/watch'),
     copy: require('./grunt/copy'),
     connect: require('./grunt/connect'),
+    less: require('./grunt/less'),
     dot: require('./grunt/dot')
   });
 
   require('load-grunt-tasks')(grunt);
 
+  grunt.registerTask('default', ['build']);
+
   grunt.registerTask('compile', [
+    'less:dev',
     'browserify:dev',
-    'copy',
+    'copy:dev',
     'replace:dev'
   ]);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('serve', [
     'eslint',
-    'karma',
-    'clean',
+    'clean:dev',
     'dot',
     'compile',
     'connect',
@@ -45,13 +49,14 @@ module.exports = function(grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build-prod', [
+  grunt.registerTask('build', [
     'eslint',
     'karma',
-    'clean',
+    'clean:prod',
     'dot',
     'browserify:prod',
-    'copy',
+    'less:dev',
+    'copy:prod',
     'replace:prod'
   ]);
 };

@@ -1,12 +1,18 @@
 module.exports = {
-  html: {
+  dev: {
+    files: [{
+      src: ['src/index.html'],
+      dest: '.tmp/index.html'
+    }]
+  },
+  prod: {
     files: [{
       src: ['src/index.html'],
       dest: 'dist/index.html'
     },{
       flatten: true,
       expand: true,
-      src: ['src/assets/css/*'],
+      src: ['.tmp/css/*'],
       dest: 'dist/css'
     },{
       flatten: true,

@@ -3,7 +3,7 @@ module.exports = {
     options: {
       port: 8000,
       hostname: '0.0.0.0',
-      base: 'dist',
+      base: ['.tmp', 'src/assets'],
       livereload: true
     }
   }
