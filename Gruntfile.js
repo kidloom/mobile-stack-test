@@ -41,6 +41,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', [
     'eslint',
+    'dot',
     'karma'
   ]);
 

@@ -1,3 +1,4 @@
+{{=it.message}}
 <div class="row content-menu">
     <div class="col-xs-3" onclick="Helper.getContent('book');">
         <div class="btn-book"><div class="alpha-layer"></div><img class="img-responsive" src="http://amazonia.storage.googleapis.com/v23/arpersonal/img/all/icon-book.png"/><a class="text-book"></a></div>

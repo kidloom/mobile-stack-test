@@ -10,6 +10,6 @@ module.exports = {
   },
   scripts: {
     files: sourceFiles.concat('src/assets/css/*.css').concat('src/**/*.js'),
-    tasks: ['compile']
+    tasks: ['eslint', 'compile']
   }
 };
