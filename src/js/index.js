@@ -1,6 +1,6 @@
 // import Config from 'config';
 import HelloComponent from './components/hello';
-import { default as router } from 'directify';
+import Router from './services/router'; // uses https://github.com/flatiron/director
  
 let routingTable = {
   's': () => {
@@ -12,5 +12,5 @@ let routingTable = {
   }
 };
  
-let targetElement = document.getElementById('router-view');
-router(routingTable, targetElement);
+let router = Router(routingTable);
+router.init();
