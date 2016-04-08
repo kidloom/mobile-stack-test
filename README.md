@@ -7,9 +7,10 @@ Development features:
 - grunt tasks for developing and compiling
 
 Libraries:
-- Director router (https://github.com/flatiron/director) through directify npm module
+- Director router (https://github.com/flatiron/director)
 - doT compiled templates
 - Karma & Jasmine for the tests
+- minpubsub on steroids for public event subscribing
 
 Features:
 - ~12kb gzipped js
