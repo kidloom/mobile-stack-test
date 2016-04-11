@@ -51,9 +51,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'eslint',
+    'dot',
     'karma',
     'clean:prod',
-    'dot',
     'browserify:prod',
     'less:dev',
     'copy:prod',

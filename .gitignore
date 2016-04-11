@@ -4,5 +4,5 @@ npm-debug.log
 .DS_Store
 dist/
 node_modules/
-src/template.js
+src/templates.js
 *.swp
