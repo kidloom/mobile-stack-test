@@ -4,7 +4,7 @@ var sourceFiles = require('./sourceFiles');
 module.exports = {
   dev: {
     files: {
-      '.tmp/app.js': ['src/templates.js', 'src/**/*.js']
+      '.tmp/app.js': ['src/**/*.js']
     },
     options: {
       browserifyOptions: {
@@ -16,7 +16,7 @@ module.exports = {
   },
   prod: {
     files: {
-      'dist/app.js': ['src/templates.js', 'src/**/*.js']
+      'dist/app.js': ['src/**/*.js']
     },
     options: {
       bundleDelay: 1000,
